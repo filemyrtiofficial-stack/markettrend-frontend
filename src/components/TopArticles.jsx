@@ -1,14 +1,16 @@
 import React from "react";
-import "./Style/NewsLayout.css";
+import featureImg from "../assets/2.webp";
+
+import "./Style/TopArticles.css";
 
 export default function TopArticles() {
   return (
     <div className="top-articles">
       <div className="article-card">
-        <img
-          src="https://via.placeholder.com/150x100"
-          alt="Article"
-          className="article-img"
+        <img 
+          src={featureImg} 
+          alt="Features" 
+          className="featured-img" 
         />
         <h4>Trump's tariff revenue just hit another monthly record</h4>
         <p>Yahoo Finance · 3h ago</p>

@@ -1,14 +1,16 @@
 import React from "react";
-import "./Style/NewsLayout.css";
+import featureImg from "../assets/1.webp";
+import "./Style/FeatuerNews.css";
 
 export default function FeaturedNews() {
   return (
     <div className="news-left">
-      <img
-        src="https://via.placeholder.com/600x350"
-        alt="Featured"
-        className="featured-img"
-      />
+      
+<img 
+  src={featureImg} 
+  alt="Features" 
+  className="featured-img" 
+/>
       <h2 className="news-title">
         China warns Mexico to 'think twice' about tariff hikes
       </h2>

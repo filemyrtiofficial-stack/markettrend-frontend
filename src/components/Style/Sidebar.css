@@ -1,196 +1,152 @@
-/* Sidebar */
+/* Sidebar container */
 .sidebar {
-  width: 320px;
-  padding: 15px;
-  font-family: Arial, sans-serif;
+  width: 220px; /* ⬅ decreased from 260px */
+  padding: 12px; /* ⬅ reduced padding */
+  background: #fff;
+  border-left: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px; /* ⬅ less gap */
 }
 
-/* ==== Search Box ==== */
-.search-boxs {
-  display: flex;
-  justify-content: center;
-}
-
+/* Search Box */
 .search-boxs input {
   width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  padding: 8px 10px; /* ⬅ reduced padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.85rem; /* ⬅ smaller font */
 }
 
-/* ==== Market Summary ==== */
+/* Market Summary */
 .market-summary {
-  background: #fff;
-  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 10px; /* ⬅ reduced */
   border-radius: 6px;
-  padding: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Tabs / Country buttons */
-.Country {
-  display: flex;
-  gap: 15px;
-  border-bottom: 2px solid #f0f0f0;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  list-style: none;
-}
-
-.Country li {
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #444;
-  transition: color 0.2s;
-}
-
-.Country li:hover {
-  color: #1a7f37; /* highlight green */
-}
-
-.market-summary {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 12px;
-  font-family: Arial, sans-serif;
-}
-
-/* Tabs */
 .country-tabs {
   display: flex;
-  gap: 15px;
-  list-style: none;
-  margin: 0 0 12px 0;
+  flex-wrap: wrap;
+  gap: 6px; /* ⬅ reduced */
+  margin: 0 0 10px 0;
   padding: 0;
-  border-bottom: 2px solid #f0f0f0;
-  
-  
+  list-style: none;
 }
 
 .country-tabs li {
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: #444;
-  /* padding: 6px 10px; */
+  padding: 4px 8px; /* ⬅ reduced */
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-size: 0.8rem; /* ⬅ smaller */
   cursor: pointer;
-  
- 
+  transition: all 0.2s;
 }
 
-.country-tabs li.active {
-  color: #1a7f37;
-  border-bottom: 2px solid #1a7f37;
+.country-tabs li.active,
+.country-tabs li:hover {
+  background: #1a73e8;
+  color: #fff;
 }
 
-/* Grid for cards */
 .market-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* ⬅ reduced */
 }
 
 .market-card {
+  background: #fff;
   border: 1px solid #eee;
+  padding: 8px; /* ⬅ reduced */
   border-radius: 6px;
-  /* padding: 8px; */
   text-align: center;
 }
 
 .market-card h4 {
-  font-size: 0.60rem;
-  margin-bottom: 3px !important;
-  font-weight: 700;
-  font-family: "GT America", Arial, sans-serif;
-  color: #1967D2;
-  /* margin: 0px !important; */
-  margin-top: 2px !important;
- 
+  margin: 0 0 4px;
+  font-size: 0.85rem; /* ⬅ smaller */
+  color: #333;
 }
 
 .market-card .value {
+  font-size: 1rem; /* ⬅ slightly smaller */
   font-weight: bold;
-  font-size: 0.50rem;
-  margin-bottom: 4px;
-  border-bottom: 1px dotted blue;
-  margin-top:0px;
+  color: #222;
 }
 
 .market-card .gain {
-  color: #1a7f37;
-  font-size: 0.85rem;
-  margin-top: 15%;
+  color: #0a9d3f;
+  font-size: 0.8rem; /* ⬅ smaller */
 }
 
 .market-card .loss {
-  color: #c62828;
-  font-size: 0.85rem;
-  margin-top: 15%;
+  color: #d93025;
+  font-size: 0.8rem; /* ⬅ smaller */
 }
 
-/* ==== Portfolio Box ==== */
+/* Portfolio */
 .portfolio-box {
-  background: #fff;
+  background: #fafafa;
   border: 1px solid #eee;
+  padding: 10px; /* ⬅ reduced */
   border-radius: 6px;
-  padding: 12px;
   text-align: center;
 }
 
 .portfolio-box h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 1rem; /* ⬅ smaller */
+  color: #222;
 }
 
 .portfolio-box p {
-  font-size: 0.9rem;
-  margin-bottom: 12px;
+  font-size: 0.8rem; /* ⬅ smaller */
   color: #555;
 }
 
 .signin-btn {
-  background: #1a7f37;
-  color: #fff;
+  margin-top: 8px;
+  padding: 6px 12px; /* ⬅ reduced */
+  background: #1a73e8;
   border: none;
-  padding: 8px 14px;
-  border-radius: 4px;
+  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* ⬅ smaller */
 }
 
 .signin-btn:hover {
-  background: #155c2a;
+  background: #1558b0;
 }
 
-/* ==== Top Gainers ==== */
+/* Top Gainers */
 .top-gainers {
-  background: #fff;
+  background: #fafafa;
   border: 1px solid #eee;
+  padding: 10px; /* ⬅ reduced */
   border-radius: 6px;
-  padding: 12px;
 }
 
 .top-gainers h3 {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 1rem; /* ⬅ smaller */
+  color: #222;
 }
 
 .top-gainers ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .top-gainers li {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
-  font-size: 0.9rem;
-  border-bottom: 1px solid #f5f5f5;
+  padding: 4px 0; /* ⬅ tighter */
+  font-size: 0.85rem; /* ⬅ smaller */
+  border-bottom: 1px solid #eee;
 }
 
 .top-gainers li:last-child {
@@ -198,6 +154,6 @@
 }
 
 .top-gainers .gain {
-  color: #1a7f37;
-  font-weight: bold;
+  color: #0a9d3f;
+  font-weight: 500; /* ⬅ lighter */
 }

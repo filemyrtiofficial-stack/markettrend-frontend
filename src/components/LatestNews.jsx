@@ -1,5 +1,5 @@
 import React from "react";
-import "./Style/NewsLayout.css";
+import "./Style/LatestNews.css";
 
 export default function LatestNews() {
   return (

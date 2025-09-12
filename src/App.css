@@ -1,14 +1,46 @@
-.main-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 20px auto;
-  background-color: #F5F7F9;
+/* App.css - global + main layout */
+
+/* global reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f8;
+  color: #222;
 }
 
+/* Main layout: left = news area, right = sidebar */
+.main-layout {
+  display: flex;            /* use flex so we can fix sidebar width easily */
+  gap: 20px;
+  max-width: 1400px;
+  margin: 20px auto;
+  padding: 0 20px;
+  align-items: start;
+}
+
+/* NEWS COLUMN (first child) */
+.main-layout > :first-child {
+  flex: 1 1 auto;           /* <-- news area grows and takes remaining space */
+  min-width: 0;             /* important for children overflow in flex */
+}
+
+/* SIDEBAR (second child) */
+.main-layout > :last-child {
+  flex: 0 0 240px;          /* <- Sidebar fixed width. Change this to increase/decrease sidebar */
+  /* Example:
+     200px = smaller sidebar
+     260px = larger sidebar
+  */
+}
+
+/* responsive: stack on mobile */
 @media (max-width: 992px) {
   .main-layout {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding: 0 12px;
+  }
+  .main-layout > :last-child {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }

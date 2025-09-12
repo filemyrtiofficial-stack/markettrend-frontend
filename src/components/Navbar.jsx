@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./Style/Navbar.css";
 
 export default function Navbar() {
   const nav = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function onSearch(e) {
     if (e.key === "Enter") {
@@ -38,8 +40,16 @@ export default function Navbar() {
           <button className="search-btn">🔍</button>
         </div>
 
+        {/* Hamburger (only visible on mobile) */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen((prev) => !prev)}
+        >
+          ☰
+        </button>
+
         {/* Center-right: Links */}
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
           <li><Link to="/news">News</Link></li>
           <li><Link to="/finance">Finance</Link></li>
           <li><Link to="/sports">Sports</Link></li>
@@ -55,7 +65,7 @@ export default function Navbar() {
       </div>
 
       {/* Second Row */}
-      <div className="navbar-2inner container">
+      <div className={`navbar-2inner container ${menuOpen ? "show" : ""}`}>
         <ul className="nav-links-2">
           <li><Link to="/portfolio">My Portfolio</Link></li>
           <li><Link to="/news">News</Link></li>

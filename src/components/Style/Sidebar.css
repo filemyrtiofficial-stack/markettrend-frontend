@@ -11,7 +11,7 @@
 
 /* Search Box */
 .search-boxs input {
-  width: 100%;
+  width: 90%;
   padding: 8px 10px; /* ⬅ reduced padding */
   border: 1px solid #ccc;
   border-radius: 5px;

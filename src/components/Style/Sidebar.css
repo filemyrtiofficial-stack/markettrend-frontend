@@ -1,0 +1,203 @@
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==== Search Box ==== */
+.search-boxs {
+  display: flex;
+  justify-content: center;
+}
+
+.search-boxs input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ==== Market Summary ==== */
+.market-summary {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+/* Tabs / Country buttons */
+.Country {
+  display: flex;
+  gap: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  list-style: none;
+}
+
+.Country li {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #444;
+  transition: color 0.2s;
+}
+
+.Country li:hover {
+  color: #1a7f37; /* highlight green */
+}
+
+.market-summary {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: Arial, sans-serif;
+}
+
+/* Tabs */
+.country-tabs {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0 0 12px 0;
+  padding: 0;
+  border-bottom: 2px solid #f0f0f0;
+  
+  
+}
+
+.country-tabs li {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #444;
+  /* padding: 6px 10px; */
+  cursor: pointer;
+  
+ 
+}
+
+.country-tabs li.active {
+  color: #1a7f37;
+  border-bottom: 2px solid #1a7f37;
+}
+
+/* Grid for cards */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.market-card {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  /* padding: 8px; */
+  text-align: center;
+}
+
+.market-card h4 {
+  font-size: 0.60rem;
+  margin-bottom: 3px !important;
+  font-weight: 700;
+  font-family: "GT America", Arial, sans-serif;
+  color: #1967D2;
+  /* margin: 0px !important; */
+  margin-top: 2px !important;
+ 
+}
+
+.market-card .value {
+  font-weight: bold;
+  font-size: 0.50rem;
+  margin-bottom: 4px;
+  border-bottom: 1px dotted blue;
+  margin-top:0px;
+}
+
+.market-card .gain {
+  color: #1a7f37;
+  font-size: 0.85rem;
+  margin-top: 15%;
+}
+
+.market-card .loss {
+  color: #c62828;
+  font-size: 0.85rem;
+  margin-top: 15%;
+}
+
+/* ==== Portfolio Box ==== */
+.portfolio-box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 12px;
+  text-align: center;
+}
+
+.portfolio-box h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.portfolio-box p {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.signin-btn {
+  background: #1a7f37;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.signin-btn:hover {
+  background: #155c2a;
+}
+
+/* ==== Top Gainers ==== */
+.top-gainers {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.top-gainers h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.top-gainers ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-gainers li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.top-gainers li:last-child {
+  border-bottom: none;
+}
+
+.top-gainers .gain {
+  color: #1a7f37;
+  font-weight: bold;
+}

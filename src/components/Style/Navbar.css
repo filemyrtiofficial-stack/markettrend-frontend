@@ -148,10 +148,11 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: -300px;                       /* Center relative to parent */
-  transform: translate(-50%, 10px); /* Center horizontally + slide animation */
+  left: -300px;
+  transform: translateX(-50%) scaleY(0); /* collapsed */
+  transform-origin: top center;          /* animate from top */
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Auto-fit columns */
+  grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   background: #fff;
   color: #000;
@@ -161,16 +162,17 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 0.25s ease;
   z-index: 999;
-  min-width: 900px;                /* Large width like Yahoo */
+  min-width: 900px;
 }
 
 /* Show on hover */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, 0);   /* Slide up smoothly */
+  transform: translateX(-50%) scaleY(1); /* expand down smoothly */
 }
 
 /* Columns */

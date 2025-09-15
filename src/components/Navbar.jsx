@@ -118,7 +118,7 @@ export default function Navbar() {
 
               <div className="dropdown-col">
                 <h4>New on World Trends</h4>
-                <Link to="/ComingSoon">Creators</Link>
+                <Link to="/coming-soon">Creators</Link>
                 <Link to="/coming-soon">Tech</Link>
                 <Link to="/coming-soon">Local Services</Link>
                 <Link to="/coming-soon">Selected Edition</Link>

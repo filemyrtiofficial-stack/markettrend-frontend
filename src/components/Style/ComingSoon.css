@@ -1,108 +1,133 @@
+/* ---------- Container ---------- */
 .comingsoon-container {
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
   text-align: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #e3f2fd, #e8f5e9);
-  animation: fadeIn 1s ease-in-out;
-  border-radius: 12px;
+  font-family: "Poppins", sans-serif;
 }
 
+/* ---------- Title ---------- */
 .comingsoon-title {
   font-size: 3rem;
-  font-weight: bold;
-  color: #2e7d32;
-  margin-bottom: 10px;
-  animation: slideDown 0.8s ease;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
+/* ---------- Subtitle ---------- */
 .comingsoon-subtitle {
-  font-size: 1.2rem;
-  color: #444;
-  margin-bottom: 25px;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
-/* Countdown */
+/* ---------- Countdown ---------- */
 .countdown {
   display: flex;
   gap: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .count-box {
-  background: white;
-  padding: 20px 15px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 12px;
   min-width: 90px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  animation: popUp 0.5s ease;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .count-box:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 .count-box span {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2e7d32;
   display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .count-box small {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.875rem;
+  color: #ddd;
 }
 
-/* Notify form */
+/* ---------- Notify Form ---------- */
 .notify-form {
   display: flex;
-  gap: 10px;
-  margin-top: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.notify-form input {
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.notify-form input[type="email"] {
+  padding: 12px 15px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
   outline: none;
-  flex: 1;
-}
-
-.notify-form input:focus {
-  border-color: #2e7d32;
+  font-size: 1rem;
 }
 
 .notify-form button {
-  background: #2e7d32;
-  color: white;
+  padding: 12px 20px;
+  background: #ff6b6b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .notify-form button:hover {
-  background: #1b5e20;
+  background: #ff4757;
+  transform: scale(1.05);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .comingsoon-title {
+    font-size: 2.5rem;
+  }
+
+  .comingsoon-subtitle {
+    font-size: 1rem;
+  }
+
+  .count-box {
+    padding: 15px 20px;
+    min-width: 70px;
+  }
+
+  .count-box span {
+    font-size: 1.5rem;
+  }
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
+@media (max-width: 480px) {
+  .comingsoon-title {
+    font-size: 2rem;
+  }
 
-@keyframes popUp {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  .countdown {
+    gap: 10px;
+  }
+
+  .notify-form input,
+  .notify-form button {
+    font-size: 0.9rem;
+  }
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Style/ComingSoon.css";
 
-export default function ComingSoon() {
+export default function ComingSoon({ pageName, launchDate }) {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -9,14 +9,10 @@ export default function ComingSoon() {
     seconds: 0,
   });
 
-  // Set launch date (30 days later for demo)
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 30);
-
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date().getTime();
-      const distance = targetDate - now;
+      const distance = launchDate - now;
 
       if (distance > 0) {
         setTimeLeft({
@@ -31,11 +27,13 @@ export default function ComingSoon() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [launchDate]);
 
   return (
     <div className="comingsoon-container">
-      <h1 className="comingsoon-title">🚀 Coming Soon 🚀</h1>
+      <h1 className="comingsoon-title">
+        🚀 Coming Soon: {pageName} 🚀
+      </h1>
       <p className="comingsoon-subtitle">
         We’re working hard to launch something amazing. Stay tuned!
       </p>

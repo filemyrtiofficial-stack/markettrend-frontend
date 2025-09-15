@@ -43,7 +43,75 @@ export default function Navbar() {
           <li><Link to="/news">News</Link></li>
           <li><Link to="/finance">Finance</Link></li>
           <li><Link to="/sports">Sports</Link></li>
-          <li><Link to="/more">More ▾</Link></li>
+          <li className="dropdown">
+  <span className="dropdown-toggle">More ▾</span>
+  <div className="dropdown-menu">
+    <div className="dropdown-col">
+      <h4>News</h4>
+      <Link to="/news/today">Today's News</Link>
+      <Link to="/news/us">US</Link>
+      <Link to="/news/politics">Politics</Link>
+      <Link to="/news/world">World</Link>
+      <Link to="/news/weather">Weather</Link>
+      <Link to="/news/Climate">Climate Change</Link>
+      <Link to="/news/Health">Health</Link>
+      <Link to="/news/Science">Science</Link>
+      <Link to="/news/Original">Original</Link>
+      <Link to="/news/Newsletters">Newsletters</Link>
+      <Link to="/news/Game">Game</Link>
+
+    </div>
+    <div className="dropdown-col">
+      <h4>Life</h4>
+      <Link to="/life/health">Health</Link>
+      <Link to="/life/travel">Travel</Link>
+      <Link to="/life/food">Food</Link>
+      <Link to="/life/parenting">Parenting</Link>
+      <Link to="/news/Style-and-Beauty">Style and Beauty</Link>
+      <Link to="/news/Horoscopes">Horoscopes</Link>
+      <Link to="/news/Shopping">Shopping</Link>
+      <Link to="/news/Food">Food</Link>
+      <Link to="/news/Travel">Travel</Link>
+      <Link to="/news/Autos">Autos</Link>
+      <Link to="/news/Buying-Guide">Buying Guide</Link>
+
+    </div>
+    <div className="dropdown-col">
+      <h4>Entertainment</h4>
+      <Link to="/life/health">Health</Link>
+      <Link to="/life/travel">Travel</Link>
+      <Link to="/life/food">Food</Link>
+      <Link to="/life/parenting">Parenting</Link>
+    </div>
+
+    <div className="dropdown-col">
+      <h4>Finance</h4>
+      <Link to="/portfolio">My Portfolio</Link>
+      <Link to="/watchlists">Watchlists</Link>
+      <Link to="/markets">Markets</Link>
+      <Link to="/crypto">Crypto</Link>
+      <Link to="/sectors">Sectors</Link>
+    </div>
+
+    <div className="dropdown-col">
+      <h4>Sports</h4>
+      <Link to="/sports/nfl">NFL</Link>
+      <Link to="/sports/nba">NBA</Link>
+      <Link to="/sports/mlb">MLB</Link>
+      <Link to="/sports/soccer">Soccer</Link>
+    </div>
+
+    
+    <div className="dropdown-col">
+      <h4>New on World Trends</h4>
+      <Link to="/life/health">Health</Link>
+      <Link to="/life/travel">Travel</Link>
+      <Link to="/life/food">Food</Link>
+      <Link to="/life/parenting">Parenting</Link>
+    </div>
+  </div>
+</li>
+
         </ul>
 
         {/* Right: Icons / Buttons */}

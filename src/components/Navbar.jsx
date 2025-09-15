@@ -24,7 +24,7 @@ export default function Navbar() {
               className="logo-img"
               onError={(e) => (e.target.style.display = "none")}
             />
-            <span className="brand-text">FinanceApp</span>
+            <span className="brand-text">WorldMarketTrends</span>
           </Link>
         </div>
 

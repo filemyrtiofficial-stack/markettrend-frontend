@@ -87,7 +87,7 @@
 }
 .mail-btn {
   border: 1px solid #0076e5;
-  padding: 6px 12px;
+  padding: 6px 12px !important;
   border-radius: 20px;
   color: #0076e5;
   text-decoration: none;
@@ -95,11 +95,12 @@
 }
 .signin-btn {
   border: 1px solid #ddd;
-  padding: 6px 12px;
-  border-radius: 20px;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 14px !important;
   color: #111;
+  margin-top: 0px !important;
 }
 
 /* -------- Second Row -------- */

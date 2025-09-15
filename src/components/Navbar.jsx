@@ -78,36 +78,53 @@ export default function Navbar() {
     </div>
     <div className="dropdown-col">
       <h4>Entertainment</h4>
-      <Link to="/life/health">Health</Link>
-      <Link to="/life/travel">Travel</Link>
-      <Link to="/life/food">Food</Link>
-      <Link to="/life/parenting">Parenting</Link>
+      <Link to="/news/Celebrity">Celebrity</Link>
+      <Link to="/news/TV">TV</Link>
+      <Link to="/news/Music">Music</Link>
+      <Link to="/news/How-to-Watch">How to Watch</Link>
+      <Link to="/news/Interviews">Interviews</Link>
+      <Link to="/news/Videos">Videos</Link>
+
     </div>
 
     <div className="dropdown-col">
       <h4>Finance</h4>
-      <Link to="/portfolio">My Portfolio</Link>
-      <Link to="/watchlists">Watchlists</Link>
-      <Link to="/markets">Markets</Link>
-      <Link to="/crypto">Crypto</Link>
-      <Link to="/sectors">Sectors</Link>
+      <Link to="/news/My-Portfolio">My Portfolio</Link>
+      <Link to="/news/Watchlists">Watchlists</Link>
+      <Link to="/news/Markets">Markets</Link>
+      <Link to="/news/News">News</Link>
+      <Link to="/news/Videos">Videos</Link>
+      <Link to="/news/Screeners">Screeners</Link>
+      <Link to="/news/Personal-Finance">Personal Finance</Link>
+      <Link to="/news/Crypto">Crypto</Link>
+      <Link to="/news/Sectors">Sectors</Link>
+
     </div>
 
     <div className="dropdown-col">
       <h4>Sports</h4>
-      <Link to="/sports/nfl">NFL</Link>
-      <Link to="/sports/nba">NBA</Link>
-      <Link to="/sports/mlb">MLB</Link>
-      <Link to="/sports/soccer">Soccer</Link>
+     <Link to="/news/Fantasy">Fantasy</Link>
+      <Link to="/news/NFL">NFL</Link>
+      <Link to="/news/NBA">NBA</Link>
+      <Link to="/news/MLB">MLB</Link>
+      <Link to="/news/NHL">NHL</Link>
+      <Link to="/news/College-Football">College Football</Link>
+      <Link to="/news/College-Basketball">College Basketball</Link>
+      <Link to="/news/Soccer">Soccer</Link>
+      <Link to="/news/NFL-Draft">NFL Draft</Link>
+      <Link to="/news/Yahoo-Sports-AM">Yahoo Sports AM</Link>
+
     </div>
 
     
     <div className="dropdown-col">
       <h4>New on World Trends</h4>
-      <Link to="/life/health">Health</Link>
-      <Link to="/life/travel">Travel</Link>
-      <Link to="/life/food">Food</Link>
-      <Link to="/life/parenting">Parenting</Link>
+      <Link to="/news/Creators">Creators</Link>
+      <Link to="/news/Tech">Tech</Link>
+      <Link to="/news/Local-Services">Local Services</Link>
+      <Link to="/news/Selected-Edition">Selected Edition</Link>
+      <Link to="/news/US-English">US English</Link>
+
     </div>
   </div>
 </li>

@@ -1,6 +1,6 @@
 /* Main Featured News Container */
 .news-left {
-  flex: 5.5; /* ⬅ Increased width compared to other sections */
+  flex: 5.5; /* wide on desktop */
   padding: 20px;
   background: #fff;
   border-radius: 8px;
@@ -8,11 +8,12 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  box-sizing: border-box;
 }
 
 /* Featured Image */
 .featured-img {
-  width: 100%; /* Image takes full width of container */
+  width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
@@ -20,7 +21,7 @@
 
 /* Title */
 .news-title {
-  font-size: 1.6rem; /* Bigger for emphasis */
+  font-size: 1.6rem;
   font-weight: bold;
   margin: 8px 0;
   color: #222;
@@ -38,5 +39,50 @@
 .news-source {
   font-size: 0.85rem;
   color: #777;
-  margin-top: auto; /* Pushes it to bottom for balance */
+  margin-top: auto;
+}
+
+/* ---------- Responsive ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .news-left {
+    flex: 1;                /* take equal space in grid/flex layouts */
+    padding: 16px;
+  }
+
+  .news-title {
+    font-size: 1.4rem;
+  }
+
+  .news-desc {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .news-left {
+    flex: 1 1 100%;          /* full width */
+    padding: 14px;
+    border-radius: 0;        /* edge-to-edge */
+    box-shadow: none;        /* cleaner mobile look */
+  }
+
+  .featured-img {
+    border-radius: 0;        /* flush with edges */
+    max-height: 220px;       /* prevent giant image */
+  }
+
+  .news-title {
+    font-size: 1.2rem;
+  }
+
+  .news-desc {
+    font-size: 0.9rem;
+  }
+
+  .news-source {
+    font-size: 0.8rem;
+  }
 }

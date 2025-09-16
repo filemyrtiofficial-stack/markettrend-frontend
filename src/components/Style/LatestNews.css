@@ -3,6 +3,9 @@
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 350px;   /* sidebar style on large screens */
+  box-sizing: border-box;
 }
 
 .latest-section h3 {
@@ -27,6 +30,7 @@
   padding: 8px 0;
   border-bottom: 1px solid #f0f0f0;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .latest-section li:last-child {
@@ -35,4 +39,33 @@
 
 .latest-section li:hover {
   color: #1a73e8;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .latest-section {
+    max-width: 100%;   /* take full width inside container */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .latest-section {
+    padding: 12px;
+    border-radius: 0;   /* edge-to-edge style */
+    box-shadow: none;   /* cleaner mobile look */
+    max-width: 100%;
+  }
+
+  .latest-section h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .latest-section li {
+    font-size: 0.85rem;
+    padding: 6px 0;
+  }
 }

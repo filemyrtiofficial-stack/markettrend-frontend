@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Style/Navbar.css";
 
 export default function Navbar() {
   const nav = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function onSearch(e) {
     if (e.key === "Enter") {
@@ -35,22 +37,28 @@ export default function Navbar() {
             placeholder="Search for news, tickers or companies"
             onKeyDown={onSearch}
           />
-          <button
-            className="search-btn"
-            onClick={() => nav("/coming-soon")}
-          >
+          <button className="search-btn" onClick={() => nav("/coming-soon")}>
             🔍
           </button>
         </div>
 
+        {/* Hamburger Button */}
+        <button
+          className="hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+
         {/* Center-right: Links */}
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
           <li><Link to="/coming-soon">News</Link></li>
           <li><Link to="/coming-soon">Finance</Link></li>
           <li><Link to="/coming-soon">Sports</Link></li>
           <li className="dropdown">
             <span className="dropdown-toggle">More ▾</span>
             <div className="dropdown-menu">
+              {/* your dropdown content unchanged */}
               <div className="dropdown-col">
                 <h4>News</h4>
                 <Link to="/coming-soon">Today's News</Link>
@@ -124,6 +132,8 @@ export default function Navbar() {
                 <Link to="/coming-soon">Selected Edition</Link>
                 <Link to="/coming-soon">US English</Link>
               </div>
+            {/* </div> */}
+
             </div>
           </li>
         </ul>

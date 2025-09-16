@@ -3,18 +3,17 @@ import Navbar from "./components/Navbar";
 import NewsLayout from "./Layout/NewsLayout";
 import Sidebar from "./components/Sidebar";
 import ComingSoon from "./components/ComingSoon";
+import Footer from "./components/Footer";   // ✅ Import footer
 import "./App.css";
 
 function App() {
   const location = useLocation();
 
-  // Define all full-page Coming Soon routes with display name & launch date
   const comingSoonPages = [
     { path: "/coming-soon", name: "page", launchDate: new Date(new Date().setDate(new Date().getDate() + 30)) },
     { path: "/crypto", name: "Crypto", launchDate: new Date(new Date().setDate(new Date().getDate() + 45)) },
     { path: "/commodities", name: "Commodities", launchDate: new Date(new Date().setDate(new Date().getDate() + 60)) },
     { path: "/etfs", name: "ETFs", launchDate: new Date(new Date().setDate(new Date().getDate() + 20)) },
-    // Add more pages here easily
   ];
 
   const isFullPage = comingSoonPages.some(
@@ -24,6 +23,7 @@ function App() {
   return (
     <>
       {!isFullPage && <Navbar />}
+
       <div className="main-layout">
         <Routes>
           {/* Default route */}
@@ -49,6 +49,9 @@ function App() {
 
         {!isFullPage && <Sidebar />}
       </div>
+
+      {/* ✅ Show footer only if not on ComingSoon full page */}
+      {!isFullPage && <Footer />}
     </>
   );
 }

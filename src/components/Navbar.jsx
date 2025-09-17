@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Style/Navbar.css";
+import logo from "../assets/logo.png";  // adjust the path if needed
 
 export default function Navbar() {
   const nav = useNavigate();
@@ -19,16 +20,16 @@ export default function Navbar() {
       <div className="navbar-inner container">
         {/* Left: Logo */}
         <div className="brand">
-          <Link to="/coming-soon">
-            <img
-              src="/logo.png"
-              alt="logo"
-              className="logo-img"
-              onError={(e) => (e.target.style.display = "none")}
-            />
-            <span className="brand-text">WorldMarketTrends</span>
-          </Link>
-        </div>
+  <Link to="/coming-soon">
+    <img
+      src={logo}
+      alt="logo"
+      className="logo-img"
+      onError={(e) => (e.target.style.display = "none")}
+    />
+    {/* <span className="brand-text">WorldMarketTrends</span> */}
+  </Link>
+</div>
 
         {/* Center: Search */}
         {/* <div className="search-box">

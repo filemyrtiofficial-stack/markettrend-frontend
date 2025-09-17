@@ -2,6 +2,8 @@
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 100;
 }
 
 /* -------- First Row -------- */
@@ -9,7 +11,7 @@
   display: flex;
   align-items: center;
   padding: 8px 20px;
-  flex-wrap: wrap; /* allow 2 rows if needed */
+  flex-wrap: wrap; /* allow wrap if space is tight */
 }
 
 .brand {
@@ -53,7 +55,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: 20px; /* keeps spacing from links */
+  margin-left: 20px;
 }
 .icon-btn {
   background: none;
@@ -166,19 +168,31 @@
 }
 
 /* ---------- Responsive ---------- */
+
+/* Tablet */
 @media (max-width: 900px) {
+  .navbar-inner {
+    padding: 8px 12px;
+  }
+  .logo-img {
+    height: 22px;
+  }
+  .brand-text {
+    font-size: 16px;
+  }
   .nav-links,
   .nav-links-2 {
     display: none;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  /* First row */
   .hamburger {
     display: block;
     margin-left: auto;
   }
+
   .nav-actions {
     display: none;
   }
@@ -187,19 +201,36 @@
   .nav-links {
     display: none;
     flex-direction: column;
+    gap: 12px;
     position: absolute;
-    top: 60px;
+    top: 56px;
     left: 0;
     right: 0;
     background: #fff;
-    padding: 10px;
-    border-top: 1px solid #ccc;
+    padding: 16px;
+    border-top: 1px solid #ddd;
     z-index: 1000;
   }
   .nav-links.open {
     display: flex;
   }
+
   .nav-links-2 {
     display: none;
+  }
+
+  /* Dropdown menu becomes stacked */
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: auto;
+    padding: 16px;
+    border: none;
+    box-shadow: none;
   }
 }

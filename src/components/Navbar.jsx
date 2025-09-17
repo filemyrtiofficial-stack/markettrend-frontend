@@ -6,12 +6,12 @@ export default function Navbar() {
   const nav = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  function onSearch(e) {
-    if (e.key === "Enter") {
-      const q = e.target.value.trim();
-      if (q) nav("/coming-soon?q=" + encodeURIComponent(q));
-    }
-  }
+  // function onSearch(e) {
+  //   if (e.key === "Enter") {
+  //     const q = e.target.value.trim();
+  //     if (q) nav("/coming-soon?q=" + encodeURIComponent(q));
+  //   }
+  // }
 
   return (
     <nav className="navbar">
@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
 
         {/* Center: Search */}
-        <div className="search-box">
+        {/* <div className="search-box">
           <input
             className="search-input"
             placeholder="Search for news, tickers or companies"
@@ -40,7 +40,7 @@ export default function Navbar() {
           <button className="search-btn" onClick={() => nav("/coming-soon")}>
             🔍
           </button>
-        </div>
+        </div> */}
 
         {/* Hamburger Button */}
         <button
@@ -52,9 +52,11 @@ export default function Navbar() {
 
         {/* Center-right: Links */}
         <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <li><Link to="/coming-soon">News</Link></li>
+          <li><Link to="/coming-soon">Stock</Link></li>
           <li><Link to="/coming-soon">Finance</Link></li>
-          <li><Link to="/coming-soon">Sports</Link></li>
+          <li><Link to="/coming-soon">Crypto</Link></li>
+          <li><Link to="/coming-soon">Currency</Link></li>
+
           <li className="dropdown">
             <span className="dropdown-toggle">More ▾</span>
             <div className="dropdown-menu">
@@ -140,8 +142,8 @@ export default function Navbar() {
 
         {/* Right: Icons / Buttons */}
         <div className="nav-actions">
-          <button className="icon-btn">🔔</button>
-          <Link to="/coming-soon" className="mail-btn">📩 Mail</Link>
+          {/* <button className="icon-btn">🔔</button> */}
+          {/* <Link to="/coming-soon" className="mail-btn">📩 Mail</Link> */}
           <Link to="/coming-soon" className="signin-btn">Sign in</Link>
         </div>
       </div>
